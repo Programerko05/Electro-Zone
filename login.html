@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Electro Zone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="images/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="images/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <a href="home.html">
+          <img class="logo" alt="Electro zone logo" src="images/Logo.png" />
+        </a>
+
+        <!-- Main nav (linkovi navigacije) -->
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li><a class="main-nav-link" href="home.html">Home</a></li>
+            <li><a class="main-nav-link" href="products.html">Products</a></li>
+            <li><a class="main-nav-link" href="#">Featured</a></li>
+            <li><a class="main-nav-link" href="#">Reviews</a></li>
+          </ul>
+        </nav>
+
+        <!-- header action (header akcije - pretraga, korpa i login) -->
+        <div class="header-actions">
+          <div class="search">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search gaming PCs.."
+            />
+          </div>
+
+          <a onclick="openCart()" href="checkout.html" class="checkout-btn">
+            <div class="img"></div>
+            <span class="checkout-count">3</span>
+          </a>
+
+          <a href="login.html" class="login-btn">
+            <div class="img"></div>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button (Dugme za mobilnu navigaciju) -->
+        <button class="mobile-button">
+          <img src="images/menu.svg" alt="menu icon" />
+        </button>
+      </div>
+    </header>
+
+    <!-- Login page -->
+    <main class="main-content">
+      <!-- Login page container (Kontenjer za login stranicu koja se sastoji od dva dijela) -->
+      <div class="login-page">
+        <!-- visual (Ilustracija na lijevoj strani) -->
+        <div class="login-visual">
+          <div class="login-content">
+            <div class="login-icon">🎮</div>
+            <h2>Level Up Your Gaming</h2>
+            <p>
+              Join thousands of gamers who trust Electro Zone for their ultimate
+              gaming setups.
+            </p>
+
+            <!-- Login features -->
+            <div class="login-features">
+              <div class="login-feature">
+                <span class="feature-icon">✓</span>
+                <span>Exclusive member discounts</span>
+              </div>
+              <div class="login-feature">
+                <span class="feature-icon">✓</span>
+                <span>Early access to new builds</span>
+              </div>
+              <div class="login-feature">
+                <span class="feature-icon">✓</span>
+                <span>Track orders in real-time</span>
+              </div>
+              <div class="login-feature">
+                <span class="feature-icon">✓</span>
+                <span>Priority customer support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Login form (Desna strana forma za login) -->
+        <div class="login-form-section">
+          <div class="login-form-container">
+            <!-- Form header -->
+            <div class="login-form-header">
+              <h1>Welcome back</h1>
+              <p>Sign in to your Electro Zone account</p>
+            </div>
+
+            <!-- Tabs (Uloguj ili prijavi se) -->
+            <div class="login-tabs">
+              <button class="login-tab active">Sign in</button>
+              <button class="login-tab">Register</button>
+            </div>
+
+            <!-- Forma -->
+            <form class="login-form">
+              <!-- Email -->
+              <div class="form-group">
+                <label for="loginEmail">Email Address</label>
+                <input
+                  type="email"
+                  id="loginEmail"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <!-- Password -->
+              <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <div class="password-input">
+                  <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                  />
+                  <button type="button" class="password-toggle">👁</button>
+                </div>
+              </div>
+
+              <!-- Form options (Zapamti, zaboravljena lozinka) -->
+              <div class="form-options">
+                <div class="remember-me">
+                  <input
+                    class="remember-checkbox"
+                    type="checkbox"
+                    id="rememberMe"
+                    name="rememberMe"
+                  />
+                  <label for="rememberMe">Remember Me</label>
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+              </div>
+
+              <!-- Sign in button -->
+              <button onclick="login()" type="submit" class="login-button">
+                Sign In
+              </button>
+            </form>
+
+            <!-- Divider  -->
+            <div class="divider">
+              <span>or continue with</span>
+            </div>
+
+            <!-- Social login (Apple ili Google nalog) -->
+            <div class="social-login">
+              <button class="social-button">
+                <span class="icon">G</span>
+                <span>Google</span>
+              </button>
+              <button class="social-button">
+                <span class="icon">🍎</span>
+                <span>Apple</span>
+              </button>
+            </div>
+            <!-- Create account -->
+            <p class="account-option">
+              Don&apos;t have an account? <a href="#">Create one</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="home.html" class="footer-logo">
+              <img src="images/Logo.png" alt="logo" />
+            </a>
+            <p class="footer-description">
+              Premium gaming PCs built for champions. Experience unmatched
+              performance with our custom-built machines.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="home.html">Gaming PCs</a></li>
+              <li><a href="products.html">Workstations</a></li>
+              <li><a href="#">Components</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Deals</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Warranty</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Affiliates</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>Stay Updated</h4>
+            <p>Get updates on new builds and exclusive deals.</p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="newsletter-input"
+              />
+              <button type="submit" class="newsletter-btn">
+                <img src="images/sent.svg" alt="sent image" />
+              </button>
+            </form>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="images/twitter.png" alt="twiter social icon" />
+              </a>
+              <a href="#" class="social-link">
+                <img src="images/youtube.svg" alt="youtube social icon" />
+              </a>
+              <a href="#" class="social-link">
+                <img src="images/discord.svg" alt="discord social icon" />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="images/instagram (1).svg"
+                  alt="instagram social icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Electro Zone. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

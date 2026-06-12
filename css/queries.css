@@ -1,0 +1,196 @@
+/* Responsive */
+@media (max-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .footer-brand {
+    grid-column: 1/-1;
+    max-width: none;
+    text-align: center;
+  }
+
+  .footer-brand .footer-logo img {
+    margin: 0 auto;
+  }
+
+  .header-container {
+    gap: 1.5rem;
+  }
+
+  .main-nav-list {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .checkout-page {
+    grid-template-columns: 1fr;
+    margin-top: 10rem;
+  }
+
+  .order-summary {
+    position: static;
+  }
+
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-visual {
+    display: none;
+  }
+
+  .header-container {
+    gap: 0.5rem;
+  }
+
+  .main-nav-list {
+    gap: 1rem;
+  }
+
+  html {
+    font-size: 60%;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 6rem;
+  }
+
+  .hero-badge {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  .hero-badge .power-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .btn {
+    padding: 1.4rem 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.8rem;
+  }
+
+  .stat-label {
+    font-size: 1.4rem;
+  }
+
+  .feature-icon img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .feature-card p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .products-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
+
+  .login-btn {
+    padding: 1rem 0.5rem !important;
+    width: 10rem;
+  }
+}
+
+@media (max-width: 828px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .main-nav-list {
+    display: none;
+  }
+
+  .mobile-button {
+    display: flex;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-newsletter {
+    grid-column: 1/-1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .products-header {
+    flex-direction: column;
+    align-items: start;
+    grid-area: 1rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-actions {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links ul,
+  .footer-links h4 {
+    text-align: center;
+  }
+
+  .footer-newsletter {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-login {
+    flex-direction: column;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

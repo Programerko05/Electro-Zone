@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electro Zone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="images/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="images/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <a href="home.html">
+          <img class="logo" alt="Electro zone logo" src="images/Logo.png" />
+        </a>
+
+        <!-- Main nav (linkovi navigacije) -->
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li><a class="main-nav-link" href="home.html">Home</a></li>
+            <li><a class="main-nav-link" href="products.html">Products</a></li>
+            <li><a class="main-nav-link" href="#">Featured</a></li>
+            <li><a class="main-nav-link" href="#">Reviews</a></li>
+          </ul>
+        </nav>
+
+        <!-- header action (header akcije - pretraga, korpa i login) -->
+        <div class="header-actions">
+          <div class="search">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search gaming PCs.."
+            />
+          </div>
+
+          <a onclick="openCart()" href="checkout.html" class="checkout-btn">
+            <div class="img"></div>
+            <span class="checkout-count">3</span>
+          </a>
+
+          <a href="login.html" class="login-btn">
+            <div class="img"></div>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button (Dugem za mobilnu navigaciju) -->
+        <button class="mobile-button">
+          <img src="images/menu.svg" alt="menu icon" />
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <!-- Hero backgorund  -->
+      <div class="hero-bg">
+        <img src="images/hero-pc.jpg" alt="Gaming PC" class="hero-image" />
+        <div class="overlay"></div>
+      </div>
+
+      <!-- Hero content (Sadrzaj unutar hero sekcije) -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <img src="images/badge.svg" class="power-icon" />
+          <span>Next-Gen Gaming Power</span>
+        </div>
+        <h1 class="hero-title">
+          <span>DOMINATE</span>
+          <span class="hero-title-gradient">EVERY GAME</span>
+        </h1>
+        <p class="hero-description">
+          Experience unmatched performance with our custom-built gaming PCs.
+          Powered by the latest RTX 50 series GPUs and cutting-edge processors.
+        </p>
+
+        <!-- Buttons -->
+        <div class="hero-buttons">
+          <a href="products.html" class="btn btn-primary">
+            <span>Shop Now</span>
+            <img src="images/right.svg" alt="right arrow" />
+          </a>
+          <a href="#" class="btn btn-outline"> <span>View Featured</span> </a>
+        </div>
+
+        <!-- Hero stats -->
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">50K+</span>
+            <span class="stat-label">Happy Gamers</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">4.9</span>
+            <span class="stat-label">Average Rating</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">3 Yr</span>
+            <span class="stat-label">Warranty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <!-- Feature card-1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="images/pc.svg" alt="pc" />
+            </div>
+            <h3>RTX 50 Series</h3>
+            <p>
+              Latest NVIDIA graphics cards for ultimate ray tracing performance
+            </p>
+          </div>
+
+          <!-- Feature card-2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="images/cpu.svg" alt="cpu" />
+            </div>
+            <h3>Intel & AMD CPUs</h3>
+            <p>Choose from the fastest processors on the market</p>
+          </div>
+
+          <!-- Feature card-3 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="images/build.svg" alt="build icon" />
+            </div>
+            <h3>Custom Builds</h3>
+            <p>Personalize every component to match your gaming style</p>
+          </div>
+
+          <!-- Feature card-4 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="images/security.svg" alt="security" />
+            </div>
+            <h3>3-Year Warranty</h3>
+            <p>Full coverage with dedicated tech support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured section -->
+    <section class="featured">
+      <div class="container">
+        <!-- Header section -->
+        <div class="section-header">
+          <div class="section-badge">Featured Builds</div>
+          <h2 class="section-title">
+            Our <span class="gradient-text">Best Sellers</span>
+          </h2>
+          <p class="section-description">
+            Hand-picked gaming machines loved by our community
+          </p>
+        </div>
+
+        <div class="featured-grid">
+          <!-- Feature card-1 -->
+          <div class="product-card" id="feature-card">
+            <div class="product-img">
+              <img src="images/gaming-pc-1.jpg" alt="Titan x Pro" />
+              <div class="product-overlay">
+                <a href="checkout.html" class="quick-add">
+                  <img src="images/checkout.svg" alt="checkout" /> Add to Cart
+                </a>
+              </div>
+            </div>
+
+            <!-- Card-info -->
+            <div class="product-info">
+              <span class="product-category">High-End Gaming</span>
+              <h3 class="product-title">Titan X Pro</h3>
+              <div class="product-specs">
+                <span>RTX 5090</span>
+                <span>i9-15900K</span>
+                <span>64GB DDR5</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-current">$4,299</span>
+                </div>
+                <div class="product-rating">
+                  <img src="images/star.svg" alt="rating" class="rating" />
+                  <span>4.9 (128)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature card-2 -->
+          <div class="product-card" id="feature-card">
+            <div class="product-img">
+              <img src="images/gaming-pc-3.jpg" alt="Aurora Elite" />
+              <div class="product-overlay">
+                <a href="checkout.html" class="quick-add">
+                  <img src="images/checkout.svg" alt="chekcout" /> Add to Cart
+                </a>
+              </div>
+            </div>
+
+            <!-- Card-info -->
+            <div class="product-info">
+              <span class="product-category">Premium Gaming</span>
+              <h3 class="product-title">Aurora Elite</h3>
+              <div class="product-specs">
+                <span>RTX 5080</span>
+                <span>R9 9950X</span>
+                <span>54GB DDR5</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-current">$3,499</span>
+                </div>
+                <div class="product-rating">
+                  <img src="images/star.svg" alt="rating" class="rating" />
+                  <span>4.8 (89)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature card-3 -->
+          <div class="product-card" id="feature-card">
+            <div class="product-img">
+              <img src="images/gaming-pc-6.jpg" alt="Phantom RGB" />
+              <div class="product-overlay">
+                <a href="checkout.html" class="quick-add">
+                  <img src="images/checkout.svg" /> Add to Cart
+                </a>
+              </div>
+            </div>
+            <!-- Feature info -->
+            <div class="product-info">
+              <span class="product-category">Water Cooled</span>
+              <h3 class="product-title">Phantom RGB</h3>
+              <div class="product-specs">
+                <span>RTX 5090</span>
+                <span>i9-15900KS</span>
+                <span>128GB DDR5</span>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-old">5,999</span>
+                  <span class="price-current">$5,099</span>
+                </div>
+                <div class="product-rating">
+                  <img src="images/star.svg" alt="rating" class="rating" />
+                  <span>5.0 (64)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Call to action btn -->
+        <div class="section-cta">
+          <a href="products.html" class="btn btn-outline"
+            >View all Products
+
+            <img src="images/right-blue.svg" alt="right-arrow" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews-section -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Testimonials</div>
+          <h2 class="section-title">
+            What <span class="gradient-text">Gamers Say</span>
+          </h2>
+
+          <p class="section-description">
+            Real reviews from our amazing gaming community
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review card-1 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">
+                <span>MK</span>
+              </div>
+              <div class="review-info">
+                <h4>Marcus K.</h4>
+                <span class="review-title">Pro Gamer</span>
+              </div>
+              <div class="review-rating">
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+              </div>
+            </div>
+            <div class="review-product">
+              <img src="images/gaming-pc-1.jpg" alt="Titan X Pro" />
+              <span>Titan X Pro</span>
+            </div>
+            <p class="review-text">
+              "Absolutely insane performance! Running Cyberpunk at 4K with ray
+              tracing and getting 120+ FPS. The build quality is exceptional and
+              cable management is perfect. Best purchase I've ever made."
+            </p>
+            <div class="review-footer">
+              <span class="review-date">2 weeks ago </span>
+              <span class="review-verified">
+                <img src="images/verified.svg" alt="verified" />
+                Verified Purchase
+              </span>
+            </div>
+          </div>
+
+          <!-- Review card-2 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">
+                <span>SL</span>
+              </div>
+              <div class="review-info">
+                <h4>Sara L.</h4>
+                <span class="review-title">Content Creator</span>
+              </div>
+              <div class="review-rating">
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+              </div>
+            </div>
+            <div class="review-product">
+              <img src="images/gaming-pc-3.jpg" alt="Aurora Elite" />
+              <span>Aurora Elite</span>
+            </div>
+            <p class="review-text">
+              "Perfect for streaming and video editing! The RGB setup is
+              gorgeous and the customer support team was incredibly helpful
+              during the ordering process. Highly recommend for content
+              creators."
+            </p>
+            <div class="review-footer">
+              <span class="review-date">1 month ago </span>
+              <span class="review-verified">
+                <img src="images/verified.svg" alt="verified" />
+                Verified Purchase
+              </span>
+            </div>
+          </div>
+
+          <!-- Review card-3 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">
+                <span>JT</span>
+              </div>
+              <div class="review-info">
+                <h4>Jake T.</h4>
+                <span class="review-title">Esports Player</span>
+              </div>
+              <div class="review-rating">
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+              </div>
+            </div>
+            <div class="review-product">
+              <img src="images/gaming-pc-6.jpg" alt="Phantom RGB" />
+              <span>Phantom RGB</span>
+            </div>
+            <p class="review-text">
+              "This beast handles competitive gaming like a dream. Zero frame
+              drops during tournaments and the water cooling keeps everything
+              ice cold. Worth every penny for serious gamers."
+            </p>
+            <div class="review-footer">
+              <span class="review-date">3 weeks ago </span>
+              <span class="review-verified">
+                <img src="images/verified.svg" alt="verified" />
+                Verified Purchase
+              </span>
+            </div>
+          </div>
+
+          <!-- Review card 4 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">
+                <span>AR</span>
+              </div>
+              <div class="review-info">
+                <h4>Alex R.</h4>
+                <span class="review-title">Software Developer</span>
+              </div>
+              <div class="review-rating">
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+                <img src="images/star.svg" alt="rating" />
+              </div>
+            </div>
+            <div class="review-product">
+              <img src="images/gaming-pc-2.jpg" alt="Shadow Strike" />
+              <span>Phantom RGB</span>
+            </div>
+            <p class="review-text">
+              "Not just for gaming - this machine crushes my development
+              workloads too. Compiling large projects is a breeze and I can run
+              multiple VMs without breaking a sweat. Amazing build!"
+            </p>
+            <div class="review-footer">
+              <span class="review-date">1 week ago </span>
+              <span class="review-verified">
+                <img src="images/verified.svg" alt="verified" />
+                Verified Purchase
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review summary (Prosjecni rating) -->
+        <div class="review-summary">
+          <div class="summary-rating">
+            <span class="big-rating">4.9</span>
+            <div class="summary-stars">
+              <img src="images/star.svg" alt="rating" />
+              <img src="images/star.svg" alt="rating" />
+              <img src="images/star.svg" alt="rating" />
+              <img src="images/star.svg" alt="rating" />
+              <img src="images/star.svg" alt="rating" />
+            </div>
+            <span class="review-count">Based on 2,847 reviews</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to<span class="gradient-text"> Level Up</span>?</h2>
+          <p>
+            Join thousands of gamers who trust Electro Zone for their gaming
+            needs.
+          </p>
+          <a href="products.html" class="btn btn-primary">
+            Browse All PCs
+            <img src="images/right.svg" alt="right-arrow" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="home.html" class="footer-logo">
+              <img src="images/Logo.png" alt="logo" />
+            </a>
+            <p class="footer-description">
+              Premium gaming PCs built for champions. Experience unmatched
+              performance with our custom-built machines.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="home.html">Gaming PCs</a></li>
+              <li><a href="products.html">Workstations</a></li>
+              <li><a href="#">Components</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Deals</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Warranty</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Affiliates</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>Stay Updated</h4>
+            <p>Get updates on new builds and exclusive deals.</p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="newsletter-input"
+              />
+              <button type="submit" class="newsletter-btn">
+                <img src="images/sent.svg" alt="sent image" />
+              </button>
+            </form>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="images/twitter.png" alt="twiter social icon" />
+              </a>
+              <a href="#" class="social-link">
+                <img src="images/youtube.svg" alt="youtube social icon" />
+              </a>
+              <a href="#" class="social-link">
+                <img src="images/discord.svg" alt="discord social icon" />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="images/instagram (1).svg"
+                  alt="instagram social icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Electro Zone. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
