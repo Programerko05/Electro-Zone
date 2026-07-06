@@ -51,4 +51,30 @@ function isInStock(product, qty) {
 // console.log(isInStock(product1, -4));
 // console.log(isInStock(product1, 111))
 
-function add
+// Funkcija za dodavanje proizvoda u korpu
+function addToCart(cart, product, qty) {
+  // Provjera da li ima proizvoda na stanju
+  if (!isInStock(product, qty)) {
+    // Ukoliko nema ispis u koznoli da nema dovoljno proizvoda na stanju
+    console.log(`Nema dovoljno proizvoda ${product.name} na stanju!`);
+  } else {
+    // Ukoliko ima, samnjujemo kolicinu proizoda na stanju za kolicinu koja je dodata u korpu
+    product.quantity -= qty;
+
+    // Prolazimo kroz sve proizvode u korpi i provjeravamo da li je proizvod vec dodat u korpu
+    cart.items.ForEach((item) => {
+      if (item.id === product.id) {
+        // Ukoliko je proizvod vec dodat, povecavamo kolicinu proizvoda u korpi za kolicinu koja je dodata
+        item.quantity += qty;
+      } else {
+        // Ukoliko proizvod nije dodat u korpu, dodajemo ga
+        cart.items.push({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          quantity: qty,
+        });
+      }
+    });
+  }
+}
